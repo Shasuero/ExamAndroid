@@ -1,10 +1,8 @@
 package com.apj.apjexam.adapter;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
@@ -13,32 +11,14 @@ import com.apj.apjexam.bean.QueryItemBean;
 
 import java.util.List;
 
-public class QueryListAdapter extends BaseAdapter {
-    private List<QueryItemBean> mDataList;
-    private LayoutInflater mInflater;
+public class QueryListAdapter extends KBaseAdapter<QueryItemBean> {
     private class ViewHolder{
         TextView value1;
         TextView value2;
     }
 
-    public QueryListAdapter(Context context, List<QueryItemBean> list) {
-        this.mDataList = list;
-        mInflater = LayoutInflater.from(context);
-    }
-
-    @Override
-    public int getCount() {
-        return mDataList.size();
-    }
-
-    @Override
-    public Object getItem(int i) {
-        return i;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return i;
+    public QueryListAdapter(Context context, List<QueryItemBean> mDataList) {
+        super(context, mDataList);
     }
 
     @Override
@@ -54,7 +34,7 @@ public class QueryListAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        QueryItemBean item = mDataList.get(i);
+        QueryItemBean item = (QueryItemBean) getItem(i);
         holder.value1.setText(item.getValue1());
         holder.value2.setText(item.getValue2());
 

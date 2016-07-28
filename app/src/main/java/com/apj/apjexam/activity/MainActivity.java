@@ -8,7 +8,7 @@ import android.widget.Button;
 import com.apj.apjexam.R;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private class ViewHolder{
         Button add;
         Button delete;

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.apj.apjexam.R;
 
-public class DeleteActivity extends AppCompatActivity {
+public class DeleteActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
