@@ -1,6 +1,5 @@
 package com.apj.apjexam.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -15,9 +14,8 @@ import com.avos.avoscloud.FindCallback;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QueryActivity extends AppCompatActivity {
+public class QueryActivity extends BaseActivity {
     private ListView lvList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

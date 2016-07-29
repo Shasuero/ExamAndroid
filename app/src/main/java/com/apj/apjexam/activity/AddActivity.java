@@ -1,6 +1,5 @@
 package com.apj.apjexam.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,7 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.SaveCallback;
 
-public class AddActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddActivity extends BaseActivity implements View.OnClickListener {
     private class ViewHolder {
         EditText etValue1;
         EditText etValue2;
