@@ -10,10 +10,10 @@ import com.apj.apjexam.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private class ViewHolder{
-        Button add;
-        Button delete;
-        Button update;
-        Button query;
+        Button btnAdd;
+        Button btnDelete;
+        Button btnUpdate;
+        Button btnQuery;
     }
 
     private ViewHolder holder;
@@ -28,18 +28,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initEvent() {
-        holder.add.setOnClickListener(this);
-        holder.delete.setOnClickListener(this);
-        holder.update.setOnClickListener(this);
-        holder.query.setOnClickListener(this);
+        holder.btnAdd.setOnClickListener(this);
+        holder.btnDelete.setOnClickListener(this);
+        holder.btnUpdate.setOnClickListener(this);
+        holder.btnQuery.setOnClickListener(this);
     }
 
     private void initView() {
         holder = new ViewHolder();
-        holder.add = (Button)findViewById(R.id.btn_add);
-        holder.delete = (Button) findViewById(R.id.btn_delete);
-        holder.update = (Button) findViewById(R.id.btn_update);
-        holder.query = (Button) findViewById(R.id.btn_query);
+        holder.btnAdd = (Button)findViewById(R.id.btn_add);
+        holder.btnDelete = (Button) findViewById(R.id.btn_delete);
+        holder.btnUpdate = (Button) findViewById(R.id.btn_update);
+        holder.btnQuery = (Button) findViewById(R.id.btn_query);
     }
 
     @Override

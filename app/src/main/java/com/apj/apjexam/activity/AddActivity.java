@@ -14,9 +14,9 @@ import com.avos.avoscloud.SaveCallback;
 
 public class AddActivity extends AppCompatActivity implements View.OnClickListener {
     private class ViewHolder {
-        EditText value1;
-        EditText value2;
-        Button add;
+        EditText etValue1;
+        EditText etValue2;
+        Button btnAdd;
     }
 
     private ViewHolder holder;
@@ -31,22 +31,22 @@ public class AddActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     private void initEvent() {
-        holder.add.setOnClickListener(this);
+        holder.btnAdd.setOnClickListener(this);
     }
 
     private void initView() {
         holder = new ViewHolder();
-        holder.value1 = (EditText) findViewById(R.id.et_value1);
-        holder.value2 = (EditText) findViewById(R.id.et_value2);
-        holder.add = (Button) findViewById(R.id.btn_add);
+        holder.etValue1 = (EditText) findViewById(R.id.et_value1);
+        holder.etValue2 = (EditText) findViewById(R.id.et_value2);
+        holder.btnAdd = (Button) findViewById(R.id.btn_add);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_add:
-                String value1 = holder.value1.getText().toString();
-                String value2 = holder.value2.getText().toString();
+                String value1 = holder.etValue1.getText().toString();
+                String value2 = holder.etValue2.getText().toString();
 
                 AVObject object = new AVObject("Test");
                 object.put("key1", value1);

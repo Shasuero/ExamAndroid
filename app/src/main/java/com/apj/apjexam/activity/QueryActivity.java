@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QueryActivity extends AppCompatActivity {
-    private ListView mListView;
+    private ListView lvList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mListView = (ListView) findViewById(R.id.lv_data);
+        lvList = (ListView) findViewById(R.id.lv_data);
     }
 
     private void initData() {
@@ -45,7 +45,7 @@ public class QueryActivity extends AppCompatActivity {
                     queryList.add(item);
                 }
 
-                mListView.setAdapter(new QueryListAdapter(QueryActivity.this, queryList));
+                lvList.setAdapter(new QueryListAdapter(QueryActivity.this, queryList));
             }
         });
     }
